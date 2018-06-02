@@ -1,3 +1,4 @@
+import jdev.PointDTO;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

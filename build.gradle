@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.7.RELEASE'
 }
 
 subprojects{
@@ -22,6 +23,7 @@ subprojects{
     }
     dependencies {
         testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile group: 'org.springframework', name: 'spring-context', version: '4.3.7.RELEASE'
     }
 }
 
@@ -42,6 +44,7 @@ project(':tracker-core') {
     apply plugin: 'java-library-distribution'
     dependencies {
         compile project(':common')
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     }
 }
 

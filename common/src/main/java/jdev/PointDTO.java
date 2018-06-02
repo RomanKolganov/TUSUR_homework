@@ -1,10 +1,15 @@
+package jdev;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class PointDTO {
     private double lat;
     private double lon;
-    private String autoId;
+    private String autoID;
+    private double azimuth;
+    private double speed;
+    private long time;
 
     public double getLat() {
         return lat;
@@ -23,11 +28,35 @@ public class PointDTO {
     }
 
     public String getAutoId() {
-        return autoId;
+        return autoID;
     }
 
     public void setAutoId(String autoId) {
-        this.autoId = autoId;
+        this.autoID = autoId;
+    }
+
+    public double getAzimuth() {
+        return azimuth;
+    }
+
+    public void setAzimuth(double azimuth) {
+        this.azimuth = azimuth;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 
     public String toJson() throws JsonProcessingException {
@@ -37,10 +66,12 @@ public class PointDTO {
 
     @Override
     public String toString() {
-        return "PointDTO{" +
+        return "jdev.PointDTO{" +
                 "lat=" + lat +
                 ", lon=" + lon +
-                ", autoId='" + autoId + '\'' +
+                ", azimut=" + azimuth +
+                ", speed=" + speed +
+                ", autoId='" + autoID + '\'' +
                 '}';
     }
 }
