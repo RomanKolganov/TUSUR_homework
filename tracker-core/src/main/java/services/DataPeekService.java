@@ -14,4 +14,8 @@ public class DataPeekService {
     void put(PointDTO newpoint) throws InterruptedException {
         queue.put(newpoint);
     }
+
+    public BlockingDeque<PointDTO> getQueue() {
+        return queue;
+    }
 }
